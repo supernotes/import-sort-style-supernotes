@@ -1,0 +1,29 @@
+{
+  "name": "import-sort-style-supernotes",
+  "version": "0.1.0",
+  "description": "Supernotes' custom style for import-sort (cares about react, relativity, components, etc)",
+  "main": "lib/index.js",
+  "author": "Connor Neblett <connor@supernotes.app>",
+  "license": "MIT",
+  "repository": "supernotes/import-sort-style-supernotes",
+  "homepage": "https://github.com/supernotes/import-sort-style-supernotes",
+  "bugs": {
+    "url": "https://github.com/supernotes/import-sort-style-supernotes/issues"
+  },
+  "scripts": {
+    "format": "prettier --write src/*.js",
+    "build": "babel src --out-dir lib",
+    "build:watch": "babel src --watch --out-dir lib"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7"
+  }
+}
