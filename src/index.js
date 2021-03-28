@@ -1,6 +1,6 @@
 const fixedOrder = ['react', 'prop-types'];
 
-export default function(
+export default function (
   {
     alias,
     and,
@@ -14,7 +14,6 @@ export default function(
     moduleName,
     naturally,
     not,
-    startsWith,
     unicode,
   },
   file
@@ -34,6 +33,10 @@ export default function(
   };
 
   return [
+    // built-in node modules
+    { match: isNodeModule },
+    { separator: true },
+
     // import "foo"
     { match: and(hasNoMember, isAbsoluteModule) },
     { separator: true },
@@ -42,7 +45,7 @@ export default function(
     { match: and(hasNoMember, isRelativeModule, not(isStylesModule)) },
     { separator: true },
 
-    // node modules (react)
+    // node_modules (react)
     // import React from "react";
     {
       match: isReactModule,
