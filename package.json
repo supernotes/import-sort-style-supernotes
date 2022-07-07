@@ -1,11 +1,14 @@
 {
   "name": "import-sort-style-supernotes",
-  "version": "0.2.0",
+  "version": "0.4.1",
   "description": "Supernotes' custom style for import-sort (cares about react, relativity, components, etc)",
   "main": "lib/index.js",
   "author": "Connor Neblett <connor@supernotes.app>",
   "license": "MIT",
-  "repository": "supernotes/import-sort-style-supernotes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supernotes/import-sort-style-supernotes.git"
+  },
   "homepage": "https://github.com/supernotes/import-sort-style-supernotes",
   "bugs": {
     "url": "https://github.com/supernotes/import-sort-style-supernotes/issues"
