@@ -18,7 +18,7 @@ export default function (
   },
   file
 ) {
-  const isReactModule = imported => Boolean(imported.moduleName.match(/^(react|prop-types|redux)/));
+  const isReact = imported => Boolean(imported.moduleName.match(/^react$/));
   const isComponentModule = imported => Boolean(imported.moduleName.match(/^components/));
   const isStylesModule = imported => Boolean(imported.moduleName.match(/\.(s?css|less)$/));
 
@@ -48,7 +48,7 @@ export default function (
     // node_modules (react)
     // import React from "react";
     {
-      match: isReactModule,
+      match: isReact,
       sort: moduleName(reactComparator),
       sortNamedMembers: alias(unicode),
     },
